@@ -7,6 +7,7 @@ import { ProductsProvider } from './context/ProductContext';
 import { ThemeProviderWrapper } from './context/ThemeContext';
 import { CategoriesProvider } from './context/CategoryContext';
 import { CategoryPage } from './pages/CategoryPage';
+import { NotFoundPage } from './pages/NotFoundPage';
 
 function App() {
   
@@ -23,6 +24,7 @@ function App() {
                     <Route path='/' element={<Home/>}/>
                     <Route path='/history' element={<History/>}/>
                     <Route path='/category' element={<CategoryPage/>}/>
+                    <Route path='*' element={<NotFoundPage/>}/>
                   </Routes>
               </BrowserRouter>
 
