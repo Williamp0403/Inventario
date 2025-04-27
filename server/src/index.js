@@ -7,14 +7,13 @@ import categoryRouter from './routes/categories.routes.js'
 import transactionRouter from './routes/transactions.routes.js'
 
 dotenv.config()
-console.log(process.env.PORT)
 
 const app = express()
 const PORT = process.env.PORT
 
 app.use(express.json())
 app.use(cors({
-  origin: 'http://localhost:5173'
+  origin: process.env.FRONTEND_URL || 'http://localhost:5173'
 }))
 
 app.use(morgan('dev'))
